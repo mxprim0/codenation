@@ -1,0 +1,4 @@
+C:\Users\Danielly\codenation\csharp-3\Source.TestSubmission\obj\Debug\netcoreapp2.2\Source.TestSubmission.csprojAssemblyReference.cache
+C:\Users\Danielly\codenation\csharp-3\Source.TestSubmission\obj\Debug\netcoreapp2.2\Source.TestSubmission.AssemblyInfoInputs.cache
+C:\Users\Danielly\codenation\csharp-3\Source.TestSubmission\obj\Debug\netcoreapp2.2\Source.TestSubmission.AssemblyInfo.cs
+C:\Users\Danielly\codenation\csharp-3\Source.TestSubmission\obj\Debug\netcoreapp2.2\Source.TestSubmission.csproj.CoreCompileInputs.cache
