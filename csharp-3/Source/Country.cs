@@ -1,83 +1,105 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
+using System.Text;
 
 namespace Codenation.Challenge
 {
+
     public class Country
     {
-        readonly State[] states = new State[27];
-
-        private void EstadosBrasileiros()
+        public List<string> estados = new List<string>()
         {
-            states[0] = new State("Acre", "AC", 164123.040);
-            states[1] = new State("Alagoas", "AL", 27778.506);
-            states[2] = new State("Amapa", "AP", 142828.521);
-            states[3] = new State("Amazonas", "AM", 1559159.148);
-            states[4] = new State("Bahia", "BA", 564773.177);
-            states[5] = new State("Ceara", "CE", 148920.472);
-            states[6] = new State("Distrito Federal", "DF", 5779.999);
-            states[7] = new State("Espirito Santo", "ES", 46095.583);
-            states[8] = new State("Goias", "GO", 340111.783);
-            states[9] = new State("Maranhao", "MA", 331937.450);
-            states[10] = new State("Mato Grosso", "MT", 903366.192);
-            states[11] = new State("Mato Grosso do Sul", "MS", 357145.532);
-            states[12] = new State("Minas Gerais", "MG", 586522.122);
-            states[13] = new State("Para", "PA", 1247954.666);
-            states[14] = new State("Paraiba", "PB", 56585.000);
-            states[15] = new State("Parana", "PR", 199307.922);
-            states[16] = new State("Pernambuco", "PE", 98311.616);
-            states[17] = new State("Piaui", "PI", 251577.738);
-            states[18] = new State("Rio de Janeiro", "RJ", 43780.172);
-            states[19] = new State("Rio Grande do Norte", "RN", 52811.047);
-            states[20] = new State("Rio Grande do Sul", "RS", 281730.223);
-            states[21] = new State("Rondonia", "RO", 237590.547);
-            states[22] = new State("Roraima", "RR", 224300.506);
-            states[23] = new State("Santa Catarina", "SC", 95736.165);
-            states[24] = new State("Sao Paulo", "SP", 248222.362);
-            states[25] = new State("Sergipe", "SE", 21915.116);
-            states[26] = new State("Tocantins", "TO", 277720.520);
-        }
+            "Acre; AC; 164123,040",
+            "Alagoas; AL; 27778,506",
+            "Amapa; AP; 142828,521",
+            "Amazonas; AM; 1559159,148",
+            "Bahia; BA; 564773,177",
+            "Ceara; CE; 148920,472",
+            "Distrito Federal, DF; 5779,999",
+            "Espirito Santo; ES; 46095,583",
+            "Goias; GO; 340111,783",
+            "Maranhao; MA; 331937,450",
+            "Mato Grosso; MT; 903366,192",
+            "Mato Grosso do Sul; MS; 357145,532",
+            "Minas Gerais; MG; 586522.122",
+            "Para, PA; 1247954,666",
+            "Paraiba, PB, 56585,000",
+            "Parana, PR, 199307,922",
+            "Pernambuco; PE; 98311,616",
+            "Piaui; PI; 251577,738",
+            "Rio de Janeiro, RJ, 43780,172",
+            "Rio Grande do Norte; RN; 52811,047",
+            "Rio Grande do Sul; RS; 281730,223",
+            "Rondonia; RO; 237590,547",
+            "Roraima; RR; 224300,506",
+            "Santa Catarina; SC; 95736,165",
+            "Sao Paulo; SP; 248222,362",
+            "Sergipe; SE; 21915,116",
+            "Tocantins, TO, 277720,520",
+        };
 
         public State[] Top10StatesByArea()
         {
-            EstadosBrasileiros();
+            var states = GetStates(estados);
+            states = states.OrderByDescending(s => s.StateArea).Take(10).ToList();
 
-            for (int i = 0; i < states.Length; i++)
+            State[] brazilianStates = new State[10];
+
+            for (int i = 0; i < states.Count; i++)
             {
-                State indexAux = states[i];
-                int j = i + 1;
-
-                while (j < states.Length)
-                {
-                    if (indexAux.Extension < states[j].Extension)
-                    {
-                        states[i] = states[j];
-                        states[j] = indexAux;
-
-                        indexAux = states[i];
-                    }
-                    j += 1;
-                }
+                brazilianStates[i] = new State(states[i].StateName, states[i].StateAcronym);
             }
-
-            State[] result = new State[10];
-
-            for (int i = 0; i < result.Length; i++)
-            {
-                result[i] = states[i];
-            }
-
-            return result;
+            return brazilianStates;
         }
 
+        public List<ExtensionState> GetStates(List<string> list)
+        {
+            var extensionStateList = new List<ExtensionState>();
+            string stateName = string.Empty;
+            string stateAcronym = string.Empty;
+            long stateArea = 0;
+
+            foreach (var data in list)
+            {
+                var tempState = data.Split(';');
+                for (int i = 0; i < tempState.Length; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            stateAcronym = tempState[i];
+                            break;
+
+                        case 1:
+                            stateName = tempState[i];
+                            break;
+
+                        case 2:
+                            stateArea = long.Parse(RemoveWhiteSpace(tempState[i].Replace(',', ' ')));
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                extensionStateList.Add(new ExtensionState(stateAcronym, stateName, stateArea));
+            }
+            return extensionStateList;
+
+        }
+
+        public string RemoveWhiteSpace(string stringObject)
+        {
+            string returnString = string.Empty;
+            foreach (char ch in stringObject)
+            {
+                if (!Char.IsWhiteSpace(ch))
+                    returnString += ch;
+            }
+            return returnString;
+        }
     }
 }
 
-/* Fontes de Pesquisa:
- * Reandonly: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly
- * https://www.tutlane.com/tutorial/csharp/csharp-readonly-property
- * http://www.macoratti.net/14/09/c_ctrdst.htm
- * 
- * Algoritmos de Ordenação: https://marcoratti.net/10/11/alg_ord.htm
- *  https://raphaelcardoso.com.br/algoritmos-de-ordenacao-em-csharp/
- */
+
