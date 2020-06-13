@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Codenation.Challenge.Exceptions;
 using System.Linq;
+using Codenation.Challenge.Exceptions;
 
 namespace Codenation.Challenge
 {
@@ -32,9 +32,9 @@ namespace Codenation.Challenge
 
             if (teams.Any(t => t.id == teamId))
             {
-                if (!teams.Any(t => t.id == teamId && t.Players.Any(player => player.id == id)))
+                if (!teams.Any(t => t.id == teamId && t.Players.Any(p => p.id == id)))
                 {
-                    teams.First(t => t.id = teamId).Players.Add(player);
+                    teams.First(t => t.id == teamId).Players.Add(player);
                 }
                 else
                 {
@@ -49,7 +49,7 @@ namespace Codenation.Challenge
 
         public void SetCaptain(long playerId)
         {
-            if (teams.Any(t => t.Players.Any(playerId => playerId.id == playerId)))
+            if (teams.Any(t => t.Players.Any(p => p.id == playerId)))
             {
                 teams.First(t => t.Players.Any(p => p.id == playerId)).captain = playerId;
             }
@@ -80,13 +80,13 @@ namespace Codenation.Challenge
 
         public string GetPlayerName(long playerId)
         {
-            if (teams.Any(t => t.Players.Any(playerId => playerId.id == playerId)))
+            if (teams.Any(t => t.Players.Any(p => p.id == playerId)))
             {
                 return teams.First(t => t.Players.Any(p => p.id == playerId)).Players.First(p => p.id == playerId).name;
             }
             else
             {
-                throw new PlatformNotSupportedException();
+                throw new PlayerNotFoundException();
             }
         }
 
@@ -104,9 +104,9 @@ namespace Codenation.Challenge
 
         public List<long> GetTeamPlayers(long teamId)
         {
-            if (tems.Any(t => t.id == teamId))
+            if (teams.Any(t => t.id == teamId))
             {
-                return teams.First(t => t.id == teamId).Players.OrderBy(p => p.id).ToList();
+                return teams.First(t => t.id == teamId).Players.OrderBy(p => p.id).Select(p => p.id).ToList();
             }
             else
             {
@@ -133,7 +133,7 @@ namespace Codenation.Challenge
         {
             if (teams.Any(t => t.id == teamId))
             {
-                Player olderTeamPlayer = teams.FirstOrDefault(t => t.id = teamId).Players.OrderBy
+                Player olderTeamPlayer = teams.FirstOrDefault(t => t.id == teamId).Players.OrderBy
                     (p => p.birthDate).ThenBy(p => p.id).FirstOrDefault();
                 if (olderTeamPlayer != null)
                     return olderTeamPlayer.id;
@@ -156,7 +156,7 @@ namespace Codenation.Challenge
             if (teams.Any(t => t.id == teamId))
             {
                 Player higherSalaryPlayer = teams.FirstOrDefault(t => t.id == teamId).Players.OrderByDescending
-                    (p => p.salary).ThenBy(p => p.id).FirstDefault();
+                    (p => p.salary).ThenBy(p => p.id).FirstOrDefault();
                 if (higherSalaryPlayer != null)
                     return higherSalaryPlayer.id;
                 else
