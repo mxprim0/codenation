@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<testsuites time="0.660" tests="2" failures="1">
-  <testsuite id="0" name="Source.TestSubmission.dll" tests="2" failures="1" time="0.660">
-    <testcase classname="Codenation.Challenge.CountryTest" name="Codenation.Challenge.CountryTest.Should_Return_10_Itens_When_Get_Top_10_States" time="0.2420000" />
-    <testcase classname="Codenation.Challenge.CountryTest" name="Codenation.Challenge.CountryTest.Should_Return_Top_10_States_By_Area" time="0.4180000">
-      <error message="Assert.Equal() Failure&#xD;&#xA;Expected: State[] [State { Acronym = &quot;AM&quot;, Name = &quot;Amazonas&quot; }, State { Acronym = &quot;PA&quot;, Name = &quot;Pará&quot; }, State { Acronym = &quot;MT&quot;, Name = &quot;Mato Grosso&quot; }, State { Acronym = &quot;MG&quot;, Name = &quot;Minas Gerais&quot; }, State { Acronym = &quot;BA&quot;, Name = &quot;Bahia&quot; }, ...]&#xD;&#xA;Actual:   State[] [State { Acronym = &quot;MG&quot;, Name = &quot;Minas Gerais&quot; }, State { Acronym = &quot;AM&quot;, Name = &quot;Amazonas&quot; }, State { Acronym = &quot;PA&quot;, Name = &quot;Pará&quot; }, State { Acronym = &quot;MT&quot;, Name = &quot;Mato Grosso&quot; }, State { Acronym = &quot;BA&quot;, Name = &quot;Bahia&quot; }, ...]">   at Codenation.Challenge.CountryTest.Should_Return_Top_10_States_By_Area() in C:\Users\Danielly\codenation\csharp-3\Source.TestSubmission\CountryTest.cs:line 32</error>
-    </testcase>
-  </testsuite>
-</testsuites>
