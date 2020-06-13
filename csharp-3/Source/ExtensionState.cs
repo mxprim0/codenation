@@ -8,9 +8,9 @@ namespace Codenation.Challenge
     {
         public string StateAcronym { get; set; }
         public string StateName { get; set; }
-        public long StateArea { get; set; }
+        public double StateArea { get; set; }
 
-        public ExtensionState(string stateAcronym, string stateName, long stateArea)
+        public ExtensionState(string stateAcronym, string stateName, double stateArea)
         {
             StateAcronym = stateAcronym;
             StateName = stateName;

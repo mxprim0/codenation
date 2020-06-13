@@ -58,7 +58,7 @@ namespace Codenation.Challenge
             var extensionStateList = new List<ExtensionState>();
             string stateName = string.Empty;
             string stateAcronym = string.Empty;
-            long stateArea = 0;
+            double stateArea = 0;
 
             foreach (var data in list)
             {
@@ -76,7 +76,7 @@ namespace Codenation.Challenge
                             break;
 
                         case 2:
-                            stateArea = long.Parse(RemoveWhiteSpace(tempState[i].Replace(',', ' ')));
+                            stateArea = double.Parse(RemoveWhiteSpace(tempState[i].Replace(',', ' ')));
                             break;
                         default:
                             break;
