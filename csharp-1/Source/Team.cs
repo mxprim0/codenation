@@ -15,7 +15,8 @@ namespace Codenation.Challenge
         public string secondaryShirtColor;
         public long captain;
 
-        public Team(long id, string name, DateTime createData, string mainShirtColor, string secondaryShirtColor)
+        public Team(long id, string name, DateTime createData, 
+                    string mainShirtColor, string secondaryShirtColor)
         {
             Players = new List<Player>();
             this.id = id;

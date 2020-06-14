@@ -13,7 +13,8 @@ namespace Codenation.Challenge
         public int skillLevel;
         public decimal salary;
 
-        public Player(long id, string name, DateTime birthDate, int skillLevel, decimal salary)
+        public Player(long id, string name, DateTime birthDate, 
+                      int skillLevel, decimal salary)
         {
             this.id = id;
             this.name = name;

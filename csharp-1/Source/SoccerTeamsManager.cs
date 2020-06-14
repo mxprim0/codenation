@@ -12,7 +12,8 @@ namespace Codenation.Challenge
         {
         }
 
-        public void AddTeam(long id, string name, DateTime createDate, string mainShirtColor, string secondaryShirtColor)
+        public void AddTeam(long id, string name, DateTime createDate, 
+                            string mainShirtColor, string secondaryShirtColor)
         {
             Team team = new Team(id, name, createDate, mainShirtColor, secondaryShirtColor);
 
@@ -26,7 +27,8 @@ namespace Codenation.Challenge
             }
         }
 
-        public void AddPlayer(long id, long teamId, string name, DateTime birthDate, int skillLevel, decimal salary)
+        public void AddPlayer(long id, long teamId, string name, DateTime birthDate, 
+                              int skillLevel, decimal salary)
         {
             Player player = new Player(id, name, birthDate, skillLevel, salary);
 
@@ -63,7 +65,7 @@ namespace Codenation.Challenge
         {
             if (teams.Any(t => t.id == teamId))
             {
-                if (teams.Any(t => t.id == teamId && t.captain != null))
+                if (teams.Any(t => t.id == teamId && t.captain != 0))
                 {
                     return (long)teams.First(t => t.id == teamId).captain;
                 }
@@ -82,7 +84,8 @@ namespace Codenation.Challenge
         {
             if (teams.Any(t => t.Players.Any(p => p.id == playerId)))
             {
-                return teams.First(t => t.Players.Any(p => p.id == playerId)).Players.First(p => p.id == playerId).name;
+                return teams.First(t => t.Players.Any(p => p.id == playerId))
+                       .Players.First(p => p.id == playerId).name;
             }
             else
             {
@@ -106,7 +109,8 @@ namespace Codenation.Challenge
         {
             if (teams.Any(t => t.id == teamId))
             {
-                return teams.First(t => t.id == teamId).Players.OrderBy(p => p.id).Select(p => p.id).ToList();
+                return teams.First(t => t.id == teamId).Players.OrderBy
+                                  (p => p.id).Select(p => p.id).ToList();
             }
             else
             {
@@ -120,8 +124,8 @@ namespace Codenation.Challenge
             if (teams.Any(t => t.id == teamId))
             {
                 return teams.First(t => t.id == teamId).Players.First
-                        (p => p.skillLevel == teams.First(t => t.id == teamId).Players.Max
-                        (p2 => p2.skillLevel)).id;
+                       (p => p.skillLevel == teams.First(t => t.id == teamId)
+                       .Players.Max(p2 => p2.skillLevel)).id;
             }
             else
             {
@@ -134,7 +138,7 @@ namespace Codenation.Challenge
             if (teams.Any(t => t.id == teamId))
             {
                 Player olderTeamPlayer = teams.FirstOrDefault(t => t.id == teamId).Players.OrderBy
-                    (p => p.birthDate).ThenBy(p => p.id).FirstOrDefault();
+                                         (p => p.birthDate).ThenBy(p => p.id).FirstOrDefault();
                 if (olderTeamPlayer != null)
                     return olderTeamPlayer.id;
                 else
@@ -155,8 +159,9 @@ namespace Codenation.Challenge
         {
             if (teams.Any(t => t.id == teamId))
             {
-                Player higherSalaryPlayer = teams.FirstOrDefault(t => t.id == teamId).Players.OrderByDescending
-                    (p => p.salary).ThenBy(p => p.id).FirstOrDefault();
+                Player higherSalaryPlayer = teams.FirstOrDefault(t => t.id == teamId)
+                                            .Players.OrderByDescending(p => p.salary)
+                                            .ThenBy(p => p.id).FirstOrDefault();
                 if (higherSalaryPlayer != null)
                     return higherSalaryPlayer.id;
                 else
@@ -172,8 +177,8 @@ namespace Codenation.Challenge
         {
             if (teams.Any(t => t.Players.Any(p => p.id == playerId)))
             {
-                return teams.First(t => t.Players.Any(p => p.id == playerId)).Players.First
-                    (p => p.id == playerId).salary;
+                return teams.First(t => t.Players.Any(p => p.id == playerId))
+                       .Players.First(p => p.id == playerId).salary;
             }
             else
             {
@@ -188,14 +193,16 @@ namespace Codenation.Challenge
             {
                 players.AddRange(t.Players);
             }
-            return players.OrderByDescending(p => p.skillLevel).ThenBy(p => p.id).Take(top).Select(p => p.id).ToList();
+            return players.OrderByDescending(p => p.skillLevel)
+                   .ThenBy(p => p.id).Take(top).Select(p => p.id).ToList();
         }
 
         public string GetVisitorShirtColor(long teamId, long visitorTeamId)
         {
             if ((teams.Any(t => t.id == teamId)) && teams.Any(t => t.id == visitorTeamId))
             {
-                if ((teams.First(t1 => t1.id == teamId).mainShirtColor) == (teams.First(t2 => t2.id == visitorTeamId).mainShirtColor))
+                if ((teams.First(t1 => t1.id == teamId).mainShirtColor) == 
+                    (teams.First(t2 => t2.id == visitorTeamId).mainShirtColor))
                     return teams.First(t2 => t2.id == visitorTeamId).secondaryShirtColor;
                 else
                     return teams.First(t2 => t2.id == visitorTeamId).mainShirtColor;
