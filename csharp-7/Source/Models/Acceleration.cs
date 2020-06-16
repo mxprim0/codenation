@@ -1,17 +1,17 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Codenation.Challenge.Models
 {
-    [Table("company")]
-    public class Company
+    [Table("acceleration")]
+    public class Acceleration
     {
         [Required]
         [Key]
         [Column("id")]
-        public int Id { get; set; }
+        public int AccelerationId { get; set; }
 
         [Required]
         [Column("name")]
@@ -22,9 +22,17 @@ namespace Codenation.Challenge.Models
         public string Slug { get; set; }
 
         [Required]
+        [Column("challenge_id")]
+        public int ChallengeId { get; set; }
+
+        [Required]
         [Timestamp]
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
+
+        [Required]
+        [ForeignKey("ChallengeId")]
+        public Challenge Challenge { get; set; }
 
         [Required]
         public List<Candidate> Candidates { get; set; }
