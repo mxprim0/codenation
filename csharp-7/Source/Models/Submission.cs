@@ -10,7 +10,7 @@ namespace Codenation.Challenge.Models
     {
         [Required]
         [Column("user_id")]
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         [Required]
         [Column("challenge_id")]

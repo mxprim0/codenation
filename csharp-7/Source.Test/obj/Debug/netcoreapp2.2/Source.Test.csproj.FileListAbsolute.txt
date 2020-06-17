@@ -20,3 +20,5 @@ C:\Users\Danielly\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source
 C:\Users\Danielly\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source.Test.dll
 C:\Users\Danielly\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source.Test.pdb
 C:\Users\Danielly\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source.Test.genruntimeconfig.cache
+C:\Users\Danielly\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Properties\serviceDependencies.json
+C:\Users\Danielly\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Properties\serviceDependencies.local.json
