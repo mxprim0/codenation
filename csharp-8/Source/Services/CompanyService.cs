@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Codenation.Challenge.Models;
 using System.Linq;
+using Codenation.Challenge.Models;
 using System.Threading.Tasks;
 
 namespace Codenation.Challenge.Services

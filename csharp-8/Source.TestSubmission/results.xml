@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuites time="85.597" tests="51" failures="0">
+  <testsuite id="0" name="Source.TestSubmission.dll" tests="51" failures="0" time="85.597">
+    <testcase classname="Codenation.Challenge.AccelerationServiceTest" name="Codenation.Challenge.AccelerationServiceTest.Should_Be_Right_Acceleration_When_Find_By_Id(id: 1)" time="18.5060000" />
+    <testcase classname="Codenation.Challenge.AccelerationServiceTest" name="Codenation.Challenge.AccelerationServiceTest.Should_Be_Right_Acceleration_When_Find_By_Id(id: 2)" time="0.3490000" />
+    <testcase classname="Codenation.Challenge.AccelerationServiceTest" name="Codenation.Challenge.AccelerationServiceTest.Should_Be_Right_Acceleration_When_Find_By_Id(id: 3)" time="0.0380000" />
+    <testcase classname="Codenation.Challenge.AccelerationServiceTest" name="Codenation.Challenge.AccelerationServiceTest.Should_Update_The_Acceleration_When_Save" time="0.1020000" />
+    <testcase classname="Codenation.Challenge.AccelerationServiceTest" name="Codenation.Challenge.AccelerationServiceTest.Should_Be_Right_Accelerations_When_Find_By_Company_Id(companyId: 1)" time="1.0210000" />
+    <testcase classname="Codenation.Challenge.AccelerationServiceTest" name="Codenation.Challenge.AccelerationServiceTest.Should_Be_Right_Accelerations_When_Find_By_Company_Id(companyId: 2)" time="0.1150000" />
+    <testcase classname="Codenation.Challenge.AccelerationServiceTest" name="Codenation.Challenge.AccelerationServiceTest.Should_Add_New_Acceleration_When_Save" time="0.0330000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidates_When_Find_By_Company_Id(companyId: 2)" time="0.4850000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidates_When_Find_By_Company_Id(companyId: 3)" time="0.0720000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidates_When_Find_By_Company_Id(companyId: 1)" time="0.1030000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidates_When_Find_By_Accelaration_Id(accelerationId: 2)" time="0.3390000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidates_When_Find_By_Accelaration_Id(accelerationId: 3)" time="0.0450000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidates_When_Find_By_Accelaration_Id(accelerationId: 1)" time="0.0470000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidate_When_Find_By_Id(userId: 2, accelerationId: 2, companyId: 2)" time="0.1870000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidate_When_Find_By_Id(userId: 3, accelerationId: 3, companyId: 3)" time="0.0470000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Be_Right_Candidate_When_Find_By_Id(userId: 1, accelerationId: 1, companyId: 1)" time="0.0570000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Update_The_Candidate_When_Save" time="0.0880000" />
+    <testcase classname="Codenation.Challenge.CandidateServiceTest" name="Codenation.Challenge.CandidateServiceTest.Should_Add_New_Candidate_When_Save" time="0.0070000" />
+    <testcase classname="Codenation.Challenge.ChallengeServiceTest" name="Codenation.Challenge.ChallengeServiceTest.Should_Add_New_Challenge_When_Save" time="0.0620000" />
+    <testcase classname="Codenation.Challenge.ChallengeServiceTest" name="Codenation.Challenge.ChallengeServiceTest.Should_Be_Right_Challenges_When_Find_By_Accelartion_And_User(accelerationId: 1, userId: 1)" time="0.9490000" />
+    <testcase classname="Codenation.Challenge.ChallengeServiceTest" name="Codenation.Challenge.ChallengeServiceTest.Should_Be_Right_Challenges_When_Find_By_Accelartion_And_User(accelerationId: 3, userId: 3)" time="0.0830000" />
+    <testcase classname="Codenation.Challenge.ChallengeServiceTest" name="Codenation.Challenge.ChallengeServiceTest.Should_Be_Right_Challenges_When_Find_By_Accelartion_And_User(accelerationId: 2, userId: 2)" time="0.0930000" />
+    <testcase classname="Codenation.Challenge.ChallengeServiceTest" name="Codenation.Challenge.ChallengeServiceTest.Should_Update_The_Challenge_When_Save" time="0.0450000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Companies_When_Find_By_Accelaration_Id(accelerationId: 2)" time="19.2790000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Companies_When_Find_By_Accelaration_Id(accelerationId: 1)" time="0.1200000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Add_New_Company_When_Save" time="0.4610000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Companies_When_Find_By_User_Id(userId: 1)" time="0.7940000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Companies_When_Find_By_User_Id(userId: 3)" time="0.1270000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Companies_When_Find_By_User_Id(userId: 2)" time="0.1080000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Company_When_Find_By_Id(id: 3)" time="0.2080000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Company_When_Find_By_Id(id: 2)" time="0.0500000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Be_Right_Company_When_Find_By_Id(id: 1)" time="0.0370000" />
+    <testcase classname="Codenation.Challenge.CompanyServiceTest" name="Codenation.Challenge.CompanyServiceTest.Should_Update_The_Company_When_Save" time="0.0770000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Add_New_Submission_When_Save" time="13.3760000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Be_Right_Submissions_When_Find_By_Challenge_And_Acceleration(challengeId: 3, accelerationId: 3)" time="5.8280000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Be_Right_Submissions_When_Find_By_Challenge_And_Acceleration(challengeId: 1, accelerationId: 1)" time="0.0980000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Be_Right_Submissions_When_Find_By_Challenge_And_Acceleration(challengeId: 2, accelerationId: 2)" time="0.0870000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Be_Higher_Score_When_Get_By_Challenge_Id(challengeId: 3)" time="0.8960000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Be_Higher_Score_When_Get_By_Challenge_Id(challengeId: 1)" time="0.0460000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Be_Higher_Score_When_Get_By_Challenge_Id(challengeId: 2)" time="0.0420000" />
+    <testcase classname="Codenation.Challenge.SubmissionServiceTest" name="Codenation.Challenge.SubmissionServiceTest.Should_Update_The_Sumission_When_Save" time="0.1310000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Be_Right_Users_When_Find_By_Accelaration_Name(accelerationName: &quot;Velvet Grass&quot;)" time="19.2800000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Be_Right_Users_When_Find_By_Accelaration_Name(accelerationName: &quot;Progesterone&quot;)" time="0.0980000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Be_Right_Users_When_Find_By_Company_Id(companyId: 3)" time="0.6450000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Be_Right_Users_When_Find_By_Company_Id(companyId: 1)" time="0.1280000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Be_Right_Users_When_Find_By_Company_Id(companyId: 2)" time="0.0570000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Return_Right_User_When_Find_By_Id(id: 1)" time="0.2760000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Return_Right_User_When_Find_By_Id(id: 3)" time="0.0400000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Return_Right_User_When_Find_By_Id(id: 2)" time="0.0490000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Add_New_User_When_Save" time="0.0690000" />
+    <testcase classname="Codenation.Challenge.UserServiceTest" name="Codenation.Challenge.UserServiceTest.Should_Update_The_User_When_Save" time="0.3170000" />
+  </testsuite>
+</testsuites>

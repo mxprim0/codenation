@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Codenation.Challenge.Models;
 using System.Linq;
+using Codenation.Challenge.Models;
 
 namespace Codenation.Challenge.Services
 {
@@ -15,7 +15,7 @@ namespace Codenation.Challenge.Services
         public IList<Models.Challenge> FindByAccelerationIdAndUserId(int accelerationId, int userId)
         {
             List<int> accelerationIds = CodenationContext.Candidates.Where(c => (c.AccelerationId == accelerationId) && (c.UserId == userId)).Select(a => a.AccelerationId).ToList();
-            List<Acceleration> accelerations = CodenationContext.Accelerations.Where(a => accelerationIds.Contations(a.Id)).ToList();
+            List<Acceleration> accelerations = CodenationContext.Accelerations.Where(a => accelerationIds.Contains(a.Id)).ToList();
             List<int> challengesIds = accelerations.Select(a => a.ChallengeId).ToList();
             return CodenationContext.Challenges.Where(c => challengesIds.Contains(c.Id)).ToList();
         }
