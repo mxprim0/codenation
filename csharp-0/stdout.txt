@@ -10,4 +10,4 @@ Results File: C:\Users\Danielly\codenation\csharp-0\Source.TestSubmission\result
 Execu‡Æo de Teste Bem-sucedida.
 Total de testes: 5
      Aprovados: 5
-Tempo total: 8,1107 Segundos
+Tempo total: 22,4359 Segundos

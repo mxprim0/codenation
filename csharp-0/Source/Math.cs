@@ -24,7 +24,6 @@ namespace Codenation.Challenge
 
                 soma = num1 + num2;
             }
-
             return resultado;
         }
 
@@ -51,7 +50,6 @@ namespace Codenation.Challenge
 
                 soma = num1 + num2;
             }
-
             return false;
         }
     }
