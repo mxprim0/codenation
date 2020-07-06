@@ -31,6 +31,12 @@ namespace Source
             services.AddDbContext<CodenationContext>();
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<IAccelerationService, AccelerationService>();
+            services.AddScoped<IChallengeService, ChallengeService>();
+            services.AddScoped<ICandidateService, CandidateService>();
+            services.AddScoped<ISubmissionService, SubmissionService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
