@@ -38,6 +38,7 @@ namespace Source
             services.AddMvcCore()
                 .AddAuthorization( opt => {
                     // add policies here
+                    opt.AddPolicy("Admin", policy => policy.RequireClaim(ClaimTypes.Role, "Admin"));
                 })
                 .AddJsonFormatters();    
            
