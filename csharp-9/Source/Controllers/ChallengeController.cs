@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Codenation.Challenge.DTOs;
+using Codenation.Challenge.Models;
 using Codenation.Challenge.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -43,7 +44,7 @@ namespace Codenation.Challenge.Controllers
                 Models.Challenge challenge = _mapper.Map<Models.Challenge>(value);
                 _challengeService.Save(challenge);
                 ChallengeDTO challengeDTO = _mapper.Map<ChallengeDTO>(challenge);
-                return Ok(challengeDTO);
+                    return Ok(challengeDTO);
             }
         }
     }

@@ -21,14 +21,48 @@ namespace Codenation.Challenge.Controllers
         [HttpGet]
         public ActionResult<QuoteView> GetAnyQuote()
         {
-            return NotFound();
+            try
+            {
+                Quote quote = _service.GetAnyQuote();
+                if (quote == null)
+                {
+                    return NotFound();
+                }
+
+                QuoteView quoteView = new QuoteView();
+                quoteView.Id = quote.Id;
+                quoteView.Actor = quote.Actor;
+                quoteView.Detail = quote.Detail;
+                return quoteView;
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         // GET api/quote/{actor}
         [HttpGet("{actor}")]
         public ActionResult<QuoteView> GetAnyQuote(string actor)
         {
-            return NotFound();
+            try
+            {
+                Quote quote = _service.GetAnyQuote(actor);
+                if (quote == null)
+                {
+                    return NotFound();
+                }
+
+                QuoteView quoteView = new QuoteView();
+                quoteView.Id = quote.Id;
+                quoteView.Actor = quote.Actor;
+                quoteView.Detail = quote.Detail;
+                return quoteView;
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
     }

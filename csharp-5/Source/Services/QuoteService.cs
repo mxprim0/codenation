@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Codenation.Challenge.Models;
 
@@ -17,12 +18,22 @@ namespace Codenation.Challenge.Services
 
         public Quote GetAnyQuote()
         {
-            throw new System.NotImplementedException();
+            List<Quote> quotes = _context.Quotes.ToList();
+            if (quotes.Count() == 0)
+            {
+                return null;
+            }
+            return quotes[_randomService.RandomInteger(quotes.Count())];
         }
 
         public Quote GetAnyQuote(string actor)
         {
-            throw new System.NotImplementedException();
+            List<Quote> quotesOfActor = _context.Quotes.Where(q => q.Actor == actor).ToList();
+            if (quotesOfActor.Count() == 0)
+            {
+                return null;
+            }
+            return quotesOfActor[_randomService.RandomInteger(quotesOfActor.Count())];
         }
     }
 }
