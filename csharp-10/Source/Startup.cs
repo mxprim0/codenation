@@ -16,6 +16,7 @@ using System.Security.Claims;
 using System.Net.Http;
 using IdentityServer4.Services;
 using IdentityServer4.Validation;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Source
 {
@@ -36,11 +37,10 @@ namespace Source
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore()
-                .AddAuthorization( opt => {
+                .AddAuthorization( options => {
                     // add policies here
-                    opt.AddPolicy("Admin", policy => policy.RequireClaim(ClaimTypes.Role, "Admin"));
-                })
-                .AddJsonFormatters();    
+                    options.DefaultPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                }).AddJsonFormatters();    
            
             services.AddDbContext<CodenationContext>();
             services.AddAutoMapper(typeof(Startup));

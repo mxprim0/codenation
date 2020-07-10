@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Source",
+    "\\Source.Test",
+    "\\Source\\Models"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\Source\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }

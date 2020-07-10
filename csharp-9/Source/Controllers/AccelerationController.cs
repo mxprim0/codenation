@@ -13,45 +13,37 @@ namespace Codenation.Challenge.Controllers
     [ApiController]
     public class AccelerationController : ControllerBase
     {    
-        private IMapper _mapper;
-        private IAccelerationService _accelerationService;
+        private readonly IMapper _mapper;
+        private readonly IAccelerationService _accelerationService;
 
         public AccelerationController(IAccelerationService accelerationService, IMapper mapper)
         {
-            _mapper = mapper;
             _accelerationService = accelerationService;
+            _mapper = mapper;
         }
 
         [HttpGet("{id}")]
         public ActionResult<AccelerationDTO> Get(int id)
         {
-            Acceleration acceleration = _accelerationService.FindById(id);
-            AccelerationDTO accelerationDTO = null;
-
-            if (acceleration != null)
-                accelerationDTO = _mapper.Map<AccelerationDTO>(acceleration);
-            return Ok(accelerationDTO);
-
+            return Ok(_mapper.Map<AccelerationDTO>(_accelerationService.FindById(id)));
         }
 
         [HttpGet]
-        public ActionResult<List<AccelerationDTO>> GetAll(int? companyId)
+        public ActionResult<IEnumerable<AccelerationDTO>> GetAll(int? companyId = null)
          {
-            if (companyId != null)
+            if (companyId == null)
             {
-                List<AccelerationDTO> accelerationDtoList = _accelerationService.FindByCompanyId(companyId.Value).Select(x => _mapper.Map<AccelerationDTO>(x)).ToList();
-                return Ok(accelerationDtoList);
-            }
-            else
                 return NoContent();
+            }
 
+            ICollection<Acceleration> accelerations = _accelerationService.FindByCompanyId(companyId.GetValueOrDefault());
+            return Ok(_mapper.Map<List<AccelerationDTO>>(accelerations));
          }
 
         [HttpPost]
-        public Acceleration Post([FromBody] AccelerationDTO accelerationDTO)
+        public ActionResult<AccelerationDTO> Post([FromBody] AccelerationDTO value)
         {
-            Acceleration acceleration = _mapper.Map<Acceleration>(accelerationDTO);
-            return _accelerationService.Save(acceleration);
+            return Ok(_mapper.Map<AccelerationDTO>(_accelerationService.Save(_mapper.Map<Acceleration>(value))));
         }
     }
 }
