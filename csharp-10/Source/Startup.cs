@@ -59,7 +59,7 @@ namespace Source
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
-                    options.Authority = "http://localhost:5000"; 
+                    options.Authority = "http://localhost:64339"; 
                     options.RequireHttpsMetadata = false;                      
                     options.Audience = "codenation";                   
                 });  
