@@ -36,10 +36,10 @@ namespace Source
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore()
-                .AddAuthorization( opt => {
+                .AddAuthorization( options => {
                     // add policies here
-                })
-                .AddJsonFormatters();    
+                    options.AddPolicy("Admin", policy => policy.RequireClaim(ClaimTypes.Role, "Admin"));
+                }).AddJsonFormatters();    
            
             services.AddDbContext<CodenationContext>();
             services.AddAutoMapper(typeof(Startup));

@@ -27,6 +27,11 @@ namespace Codenation.Challenge.Models
         [Required]
         public string Nickname { get; set; }
 
+        [Column("role")]
+        [StringLength(50)]
+        [Required]
+        public string Role { get; set; }
+
         [Column("password")]
         [StringLength(255)]
         [Required]
