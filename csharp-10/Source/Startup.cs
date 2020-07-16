@@ -16,7 +16,6 @@ using System.Security.Claims;
 using System.Net.Http;
 using IdentityServer4.Services;
 using IdentityServer4.Validation;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Source
 {
@@ -37,10 +36,10 @@ namespace Source
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore()
-                .AddAuthorization( options => {
+                .AddAuthorization( opt => {
                     // add policies here
-                    options.DefaultPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-                }).AddJsonFormatters();    
+                })
+                .AddJsonFormatters();    
            
             services.AddDbContext<CodenationContext>();
             services.AddAutoMapper(typeof(Startup));
@@ -59,7 +58,7 @@ namespace Source
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
-                    options.Authority = "http://localhost:64339"; 
+                    options.Authority = "http://localhost:5000"; 
                     options.RequireHttpsMetadata = false;                      
                     options.Audience = "codenation";                   
                 });  
