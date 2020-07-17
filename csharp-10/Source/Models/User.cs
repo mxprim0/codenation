@@ -37,9 +37,11 @@ namespace Codenation.Challenge.Models
         [Required]
         public string Password { get; set; }
 
+        /*
         [Column("created_at")]
         [Required]
         public DateTime CreatedAt { get; set; }
+        */
 
         public virtual ICollection<Candidate> Candidates { get; set; }
 

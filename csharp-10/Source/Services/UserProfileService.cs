@@ -37,11 +37,18 @@ namespace Codenation.Challenge.Services
 
         public static Claim[] GetUserClaims(User user)
         {
+            string role = "User";
+
+            if (user.Email == "tegglestone9@blog.com")
+            {
+                role = "Admin";
+            }
+
             return new []
             {
-                new Claim(ClaimTypes.Name, user.Nickname),
+                //new Claim(ClaimTypes.Name, user.Nickname),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, role)
             };
         }
 
