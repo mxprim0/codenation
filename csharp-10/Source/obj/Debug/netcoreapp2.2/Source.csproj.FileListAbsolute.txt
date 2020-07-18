@@ -6,7 +6,6 @@ C:\Users\Danielly\codenation\csharp-10\Source\bin\Debug\netcoreapp2.2\Source.run
 C:\Users\Danielly\codenation\csharp-10\Source\bin\Debug\netcoreapp2.2\Source.runtimeconfig.dev.json
 C:\Users\Danielly\codenation\csharp-10\Source\bin\Debug\netcoreapp2.2\Source.dll
 C:\Users\Danielly\codenation\csharp-10\Source\bin\Debug\netcoreapp2.2\Source.pdb
-C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.csprojAssemblyReference.cache
 C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.AssemblyInfoInputs.cache
 C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.AssemblyInfo.cs
 C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.csproj.CoreCompileInputs.cache
@@ -16,3 +15,4 @@ C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.Raz
 C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.dll
 C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.pdb
 C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.genruntimeconfig.cache
+C:\Users\Danielly\codenation\csharp-10\Source\obj\Debug\netcoreapp2.2\Source.csprojAssemblyReference.cache
