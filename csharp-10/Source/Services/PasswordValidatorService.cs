@@ -21,7 +21,8 @@ namespace Codenation.Challenge.Services
 
             User userFind = _dbContext.Users.Where(x => x.Email == context.UserName).FirstOrDefault();
 
-            if (userFind != null)
+            if (userFind != null && userFind.Password == context.Password)
+                //if (userFind != null)
                 context.Result = new GrantValidationResult(subject: userFind.Id.ToString(), authenticationMethod: "custom", claims: UserProfileService.GetUserClaims(userFind));
             else
                 context.Result = new GrantValidationResult(TokenRequestErrors.InvalidGrant, "Invalid username or password");

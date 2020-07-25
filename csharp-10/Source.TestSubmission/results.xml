@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<testsuites time="64.286" tests="27" failures="16">
-  <testsuite id="0" name="Source.TestSubmission.dll" tests="27" failures="16" time="64.286">
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 3)" time="38.2290000">
+<testsuites time="67.731" tests="27" failures="16">
+  <testsuite id="0" name="Source.TestSubmission.dll" tests="27" failures="16" time="67.731">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 3)" time="39.9720000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170
@@ -44,7 +44,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 5)" time="1.4200000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 5)" time="1.3040000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170
@@ -87,7 +87,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 1)" time="1.5280000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 1)" time="1.1540000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170
@@ -130,7 +130,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 9)" time="1.4400000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 9)" time="1.1870000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170
@@ -173,7 +173,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 7)" time="1.2920000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 7)" time="1.1690000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170
@@ -216,12 +216,12 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CandidateController&quot;)" time="0.4310000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;AccelerationController&quot;)" time="0.2260000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CompanyController&quot;)" time="0.2370000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;SubmissionController&quot;)" time="0.2730000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;UserController&quot;)" time="0.2280000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 3, endpoint: &quot;/api/acceleration&quot;)" time="0.9280000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CandidateController&quot;)" time="0.4920000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;AccelerationController&quot;)" time="0.3500000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CompanyController&quot;)" time="0.2920000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;SubmissionController&quot;)" time="0.2370000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;UserController&quot;)" time="0.2150000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 3, endpoint: &quot;/api/acceleration&quot;)" time="0.9640000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132
@@ -264,7 +264,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 7, endpoint: &quot;/api/submission&quot;)" time="1.1370000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 7, endpoint: &quot;/api/submission&quot;)" time="1.3850000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132
@@ -307,7 +307,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 5, endpoint: &quot;/api/candidate&quot;)" time="1.0780000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 5, endpoint: &quot;/api/candidate&quot;)" time="1.1880000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132
@@ -350,7 +350,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 1, endpoint: &quot;/api/company&quot;)" time="1.0220000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 1, endpoint: &quot;/api/company&quot;)" time="1.4650000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132
@@ -393,7 +393,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Admin_Be_Authorized_On_Route_User" time="1.2290000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Admin_Be_Authorized_On_Route_User" time="1.4220000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Admin_Be_Authorized_On_Route_User() in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 148
@@ -436,12 +436,12 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/candidate&quot;)" time="2.1740000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/submission&quot;)" time="0.3040000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/acceleration&quot;)" time="0.2820000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/user&quot;)" time="0.2640000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/company&quot;)" time="0.2550000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 1)" time="0.7660000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/candidate&quot;)" time="3.1420000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/submission&quot;)" time="0.4460000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/acceleration&quot;)" time="0.3320000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/user&quot;)" time="0.2670000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/company&quot;)" time="0.3000000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 1)" time="0.8740000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113
@@ -527,7 +527,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 5)" time="1.0510000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 5)" time="0.9260000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113
@@ -570,7 +570,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 10)" time="1.0270000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 10)" time="1.0790000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113
@@ -613,7 +613,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 3)" time="0.8340000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 3)" time="0.9640000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113
@@ -656,7 +656,7 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 9)" time="1.0060000">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 9)" time="0.8840000">
       <error message="System.AggregateException : One or more errors occurred. (Invalid column name 'role'.)&#xD;&#xA;---- System.Data.SqlClient.SqlException : Invalid column name 'role'.">   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 60
    at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Danielly\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113
@@ -699,6 +699,6 @@
    at Microsoft.AspNetCore.TestHost.ClientHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
    at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)</error>
     </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Challenge_Route_Be_Authorized_When_Call_With_No_Token" time="4.5070000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Challenge_Route_Be_Authorized_When_Call_With_No_Token" time="4.6030000" />
   </testsuite>
 </testsuites>
