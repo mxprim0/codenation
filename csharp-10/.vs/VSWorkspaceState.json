@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Source",
-    "\\Source\\Models"
+    "\\Source\\Controllers",
+    "\\Source\\Properties"
   ],
-  "SelectedNode": "\\Source\\Models\\User.cs",
+  "SelectedNode": "\\Source\\Controllers\\UserController.cs",
   "PreviewInSolutionExplorer": false
 }
