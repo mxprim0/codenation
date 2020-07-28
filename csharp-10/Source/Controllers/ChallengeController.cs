@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Codenation.Challenge.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Codenation.Challenge.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +25,7 @@ namespace Codenation.Challenge.Controllers
         // GET api/challenge
         [HttpGet]
         public ActionResult<IEnumerable<ChallengeDTO>> GetAll(int? accelerationId = null, int? userId = null)
-        {            
+        {
             if (accelerationId.HasValue && userId.HasValue)
                 return Ok(this.service.FindByAccelerationIdAndUserId(accelerationId.Value, userId.Value).
                         Select(x => mapper.Map<ChallengeDTO>(x)).
@@ -41,6 +42,6 @@ namespace Codenation.Challenge.Controllers
                 return BadRequest(ModelState);
             return Ok(mapper.Map<ChallengeDTO>(service.Save(mapper.Map<Models.Challenge>(value))));
         }
-     
+
     }
 }
