@@ -27,8 +27,8 @@ namespace Source
 
         public Startup(IConfiguration configuration, IHostingEnvironment environment)
         {
-            Configuration = configuration;           
-            if (!environment.IsEnvironment("Testing")) 
+            Configuration = configuration;
+            if (!environment.IsEnvironment("Testing"))
                 IdentitServerStartup = new StartupIdentityServer(environment);
         }
 
@@ -36,11 +36,11 @@ namespace Source
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore()
-                .AddAuthorization( opt => {
+                .AddAuthorization(options => {
                     // add policies here
-                })
-                .AddJsonFormatters();    
-           
+                    options.AddPolicy("Admin", policy => policy.RequireClaim(ClaimTypes.Role, "Admin"));
+                }).AddJsonFormatters();
+
             services.AddDbContext<CodenationContext>();
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IUserService, UserService>();
@@ -58,10 +58,10 @@ namespace Source
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
-                    options.Authority = "http://localhost:5000"; 
-                    options.RequireHttpsMetadata = false;                      
-                    options.Audience = "codenation";                   
-                });  
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+                    options.Audience = "codenation";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,7 +69,7 @@ namespace Source
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();                
+                app.UseDeveloperExceptionPage();
             }
 
             if (IdentitServerStartup != null)
