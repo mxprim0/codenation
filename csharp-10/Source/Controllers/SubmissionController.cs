@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Codenation.Challenge.Controllers
 {
-    [Route("api/[controller]")]    
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
     public class SubmissionController : ControllerBase
     {
@@ -26,7 +27,7 @@ namespace Codenation.Challenge.Controllers
         // GET api/submission
         [HttpGet]
         public ActionResult<IEnumerable<SubmissionDTO>> GetAll(int? challengeId = null, int? accelerationId = null)
-        {            
+        {
             if (challengeId.HasValue && accelerationId.HasValue)
                 return Ok(this.service.FindByChallengeIdAndAccelerationId(challengeId.Value, accelerationId.Value).
                     Select(x => mapper.Map<SubmissionDTO>(x)).
@@ -38,7 +39,7 @@ namespace Codenation.Challenge.Controllers
         // GET api/submission/higherScore
         [HttpGet("higherScore")]
         public ActionResult<decimal> GetHigherScore(int challengeId)
-        {            
+        {
             return Ok(service.FindHigherScoreByChallengeId(challengeId));
         }
 
@@ -50,6 +51,6 @@ namespace Codenation.Challenge.Controllers
                 return BadRequest(ModelState);
             return Ok(mapper.Map<SubmissionDTO>(service.Save(mapper.Map<Submission>(value))));
         }
-     
+
     }
 }
