@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Codenation.Challenge.Controllers
 {
-    [Route("api/[controller]")]    
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
     public class CandidateController : ControllerBase
     {
@@ -25,7 +26,7 @@ namespace Codenation.Challenge.Controllers
         // GET api/candidate
         [HttpGet]
         public ActionResult<IEnumerable<CandidateDTO>> GetAll(int? companyId = null, int? accelerationId = null)
-        {            
+        {
             if (companyId.HasValue)
                 return Ok(this.service.FindByCompanyId(companyId.Value).
                     Select(x => mapper.Map<CandidateDTO>(x)).
@@ -41,7 +42,7 @@ namespace Codenation.Challenge.Controllers
         // GET api/candidate/{userId}/{accelerationId}/{companyId}
         [HttpGet("{userId}/{accelerationId}/{companyId}")]
         public ActionResult<CandidateDTO> Get(int userId, int accelerationId, int companyId)
-        {            
+        {
             return Ok(mapper.Map<CandidateDTO>(service.FindById(userId, accelerationId, companyId)));
         }
 
@@ -53,6 +54,6 @@ namespace Codenation.Challenge.Controllers
                 return BadRequest(ModelState);
             return Ok(mapper.Map<CandidateDTO>(service.Save(mapper.Map<Candidate>(value))));
         }
-     
+
     }
 }
