@@ -38,11 +38,6 @@ namespace Codenation.Challenge.Services
             return context.Users.Find(id);
         }
 
-        public User FindByEmail(string email)
-        {
-            return context.Users.Where(x => x.Email == email).FirstOrDefault();
-        }
-
         public User Save(User user)
         {
             var state = user.Id == 0 ? EntityState.Added : EntityState.Modified;

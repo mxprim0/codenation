@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Codenation.Challenge.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]    
     [ApiController]
     public class CandidateController : ControllerBase
