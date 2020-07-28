@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Codenation.Challenge.Controllers
 {
-    [Route("api/[controller]")]    
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
     public class AccelerationController : ControllerBase
     {
@@ -26,19 +27,19 @@ namespace Codenation.Challenge.Controllers
         // GET api/acceleration
         [HttpGet]
         public ActionResult<IEnumerable<AccelerationDTO>> GetAll(int? companyId)
-        {            
+        {
             if (companyId.HasValue)
                 return Ok(this.service.FindByCompanyId(companyId.Value).
                     Select(x => mapper.Map<AccelerationDTO>(x)).
                     ToList());
             else
-                return NoContent();                
+                return NoContent();
         }
 
         // GET api/acceleration/{id}
         [HttpGet("{id}")]
         public ActionResult<AccelerationDTO> Get(int id)
-        {            
+        {
             return Ok(mapper.Map<AccelerationDTO>(service.FindById(id)));
         }
 
@@ -50,6 +51,6 @@ namespace Codenation.Challenge.Controllers
                 return BadRequest(ModelState);
             return Ok(mapper.Map<AccelerationDTO>(service.Save(mapper.Map<Acceleration>(value))));
         }
-     
+
     }
 }
