@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Codenation.Challenge.Controllers
 {
-    [Route("api/[controller]")]    
+    [Authorize(Policy = "Admin")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -26,7 +27,7 @@ namespace Codenation.Challenge.Controllers
         // GET api/user
         [HttpGet]
         public ActionResult<IEnumerable<UserDTO>> GetAll(string accelerationName = null, int? companyId = null)
-        {            
+        {
             if (accelerationName != null)
                 return Ok(this.service.FindByAccelerationName(accelerationName).
                     Select(x => mapper.Map<UserDTO>(x)).
@@ -43,7 +44,7 @@ namespace Codenation.Challenge.Controllers
         // GET api/user/{id}
         [HttpGet("{id}")]
         public ActionResult<UserDTO> Get(int id)
-        {            
+        {
             return Ok(mapper.Map<UserDTO>(service.FindById(id)));
         }
 
@@ -54,7 +55,7 @@ namespace Codenation.Challenge.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             return Ok(mapper.Map<UserDTO>(service.Save(mapper.Map<User>(value))));
-        }   
-     
+        }
+
     }
 }
